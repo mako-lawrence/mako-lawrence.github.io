@@ -1,8 +1,8 @@
 title: Task Management App
 email: nishikam@lawrence.edu
 description: "Portfolio for Senior seminar"
-baseurl: "https://mako-lawrence.github.io"
-url: "" 
+baseurl: ""
+url: "https://mako-lawrence.github.io" 
 theme: minima
 plugins:
   - jekyll-feed

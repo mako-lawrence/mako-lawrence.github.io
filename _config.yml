@@ -6,6 +6,7 @@ url: ""
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-theme-minima
 exclude:
   - .sass-cache/
   - .jekyll-cache/

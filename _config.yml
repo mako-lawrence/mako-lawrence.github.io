@@ -1,17 +1,11 @@
 title: Task Management App
 email: nishikam@lawrence.edu
 description: "Portfolio for Senior seminar"
-baseurl: "https://mako-lawrence.github.io" # サイトのサブパス（例: /blog）を設定する場合に変更
-url: "" # サイトのURLを設定（例: "https://yourdomain.com"）
-
-# GitHub Pages のテーマ
+baseurl: "https://mako-lawrence.github.io"
+url: "" 
 theme: minima
-
-# Jekyll のプラグイン
 plugins:
   - jekyll-feed
-
-# 除外リスト（Jekyll のビルド対象から除外するファイルやフォルダ）
 exclude:
   - .sass-cache/
   - .jekyll-cache/

@@ -1,3 +1,25 @@
 title: Task Management App
+email: nishikam@lawrence.edu
 description: "Portfolio for Senior seminar"
-theme: minima  # GitHub Pages で使えるデフォルトテーマ
+baseurl: "https://mako-lawrence.github.io" # サイトのサブパス（例: /blog）を設定する場合に変更
+url: "" # サイトのURLを設定（例: "https://yourdomain.com"）
+
+# GitHub Pages のテーマ
+theme: minima
+
+# Jekyll のプラグイン
+plugins:
+  - jekyll-feed
+
+# 除外リスト（Jekyll のビルド対象から除外するファイルやフォルダ）
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

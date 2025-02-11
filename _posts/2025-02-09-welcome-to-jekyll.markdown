@@ -15,3 +15,6 @@ The task management application is simple in functionality, yet it comprehensive
 
 ### Based on Real-Life Demand and Personal Experience ###
 At this university, I often heard that students were either pursuing double majors or facing a heavy load of assignments. I, too, frequently struggled with managing my tasks and assignments. Given this background, I felt there was a need for a tool to help organize personal tasks and assignments, and I wanted to create an application that could assist students in managing their daily workload.
+
+# Objectives #
+I had two main objectives for this senior project. First, I wanted to study the fundamental skills required for application development. Second, I aimed to learn the entire process from development to deployment. I am still not very familiar with programming and it was the first time to develop and deploy an application from scratch, because I switched my major from economics to computer science after transferring from a Japanese university. This project provided my first opportunity to develop and deploy an application from scratch, allowing me to build my foundational skills and gain hands-on experience throughout the entire development cycle.

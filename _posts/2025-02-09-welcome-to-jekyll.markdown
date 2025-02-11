@@ -105,4 +105,27 @@ return redirect(url_for('todo_app.user'))
 ```
 The functions redirect() and url_for() are helper functions in Flask. url_for() dynamically generates a URL for an endpoint within the application, and redirect() sends the user to the specified URL. This ensures that after the processing is completed, the user is directed to the appropriate page.
 
+# Demonstration #
+Now, I’m gonna show you what the application looks like.
+![home]({{ site.baseurl }}/assets/images/your-image.jpg)
+This is the Task management application. 
 
+When you open the application, you’ll see the login and register page. I’m gonna try to register to login
+
+you need to put your name, email and password. and click the register button. 
+
+Then, you should be able to log in and you'll see the user main page. To create a new task, click the "Create New" button in the upper left corner of the user page.
+
+You can enter the task title, details, and due date to create a task, and then it appears on the user page with its title and due date.
+
+When you want to see your task detail, click the gray detail button and then you can see it.
+
+and you can edit your task from the green edit button if you have some mistakes or anything that you want to change
+
+I’m gonna create more tasks to show sorting function
+
+As you can see, they are automatically sorted by due date like this, which makes it easier to prioritize which ones to work on first.
+
+When a task's deadline passes, "Expired" is displayed like this, so you can quickly notice tasks that have passed their deadlines.
+
+Once you complete a task and wish to remove it, simply push the red "Complete" button.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Developing task management application"
 date:   2025-02-09 18:50:54 -0600
 categories: jekyll update
 ---

@@ -21,10 +21,10 @@ I had two main objectives for this senior project. First, I wanted to study the 
 
 # Used Technologies #
 ### Python ###
-The backend functions are handled using the Python Flask framework, which is primarily used to implement the following features:
-*Launching the application
-*User management functions such as login and user registration
-*Interactions with the database
-*Implementation of basic CRUD operations (Create, Read, Update, Delete)
-*Automatic task sorting
+The backend functions are handled using the Python Flask framework, which is primarily used to implement the following features: 
+*Launching the application 
+*User management functions such as login and user registration 
+*Interactions with the database 
+*Implementation of basic CRUD operations (Create, Read, Update, Delete) 
+*Automatic task sorting 
 

@@ -110,22 +110,18 @@ Now, I’m gonna show you what the application looks like.
 ![home]({{ site.baseurl }}/images/scr-home.png)
 This is the Task management application. 
 ![login]({{ site.baseurl }}/images/scr-login.png)
-When you open the application, you’ll see the login and register page. I’m gonna try to register to login
-
-you need to put your name, email and password. and click the register button. 
-
-Then, you should be able to log in and you'll see the user main page. To create a new task, click the "Create New" button in the upper left corner of the user page.
-
-You can enter the task title, details, and due date to create a task, and then it appears on the user page with its title and due date.
-
+![register]({{ site.baseurl }}/images/scr-register.png)
+When you open the application, you’ll see the login and register page.
+you need to enter your name, email and passwordand and click the register button to login in register page.
+Then, you should be able to log in
+![main]({{ site.baseurl }}/images/scr-userpage.png)
+After you log-in, you'll see the user main page. To create a new task, click the "Create New" button in the upper left corner of the user page.
+![task]({{ site.baseurl }}/images/scr-createtask.png)
+You can enter the task title, details, and due date to create a task.
+![displaytasks]({{ site.baseurl }}/images/scr-sorted-expired.png)
+it appears on the user page with its title and due date.
 When you want to see your task detail, click the gray detail button and then you can see it.
-
 and you can edit your task from the green edit button if you have some mistakes or anything that you want to change
-
-I’m gonna create more tasks to show sorting function
-
-As you can see, they are automatically sorted by due date like this, which makes it easier to prioritize which ones to work on first.
-
+As you can see, they are automatically sorted by due date like this image, which makes it easier to prioritize which ones to work on first.
 When a task's deadline passes, "Expired" is displayed like this, so you can quickly notice tasks that have passed their deadlines.
-
 Once you complete a task and wish to remove it, simply push the red "Complete" button.

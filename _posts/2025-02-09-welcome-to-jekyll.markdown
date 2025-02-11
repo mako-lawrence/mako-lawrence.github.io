@@ -18,3 +18,13 @@ At this university, I often heard that students were either pursuing double majo
 
 # Objectives #
 I had two main objectives for this senior project. First, I wanted to study the fundamental skills required for application development. Second, I aimed to learn the entire process from development to deployment. I am still not very familiar with programming and it was the first time to develop and deploy an application from scratch, because I switched my major from economics to computer science after transferring from a Japanese university. This project provided my first opportunity to develop and deploy an application from scratch, allowing me to build my foundational skills and gain hands-on experience throughout the entire development cycle.
+
+# Used Technologies #
+### Python ###
+The backend functions are handled using the Python Flask framework, which is primarily used to implement the following features:
+\-Launching the application
+\-User management functions such as login and user registration
+\-Interactions with the database
+\-Implementation of basic CRUD operations (Create, Read, Update, Delete)
+\-Automatic task sorting
+

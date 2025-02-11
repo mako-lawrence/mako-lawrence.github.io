@@ -119,9 +119,9 @@ After you log-in, you'll see the user main page. To create a new task, click the
 ![task]({{ site.baseurl }}/images/scr-createtask.png)
 You can enter the task title, details, and due date to create a task.
 ![displaytasks]({{ site.baseurl }}/images/scr-sorted-expired.png)
-it appears on the user page with its title and due date.  
+After you create your task, it appears on the user page with its title and due date.  
 When you want to see your task detail, click the gray detail button and then you can see it.  
 You can edit your task from the green edit button if you have some mistakes or anything that you want to change.  
 As you can see, they are automatically sorted by due date like this image, which makes it easier to prioritize which ones to work on first.  
 When a task's deadline passes, "Expired" is displayed like the task at the top in user page, so you can quickly notice tasks that have passed their deadlines.  
-Once you complete a task and wish to remove it, simply push the red "Complete" button.  
+Once you complete a task and wish to remove it, simply push the red "Complete" button.   

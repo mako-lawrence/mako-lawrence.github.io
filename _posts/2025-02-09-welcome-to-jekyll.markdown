@@ -28,3 +28,11 @@ The backend functions are handled using the Python Flask framework, which is pri
 *Implementation of basic CRUD operations (Create, Read, Update, Delete)  
 *Automatic task sorting  
 
+### HTML/CSS ###
+Used for the front-end to manage the application’s appearance and to retrieve and display task information provided by the backend.
+
+### AWS EC2 ###
+Used for infrastructure purposes. It was utilized to set up the deployment server via an SSH connection.
+
+
+

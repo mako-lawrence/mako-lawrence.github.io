@@ -5,21 +5,21 @@ date:   2025-02-09 18:50:54 -0600
 categories: jekyll update
 ---
 
-This post introduces web application that I developed for my senior project. 
+This post introduces web application that I developed for my senior project.  
 
-# Backgrounds #
+# Backgrounds #  
 I chose to develop a task management application for two main reasons.
 
-### From a Learning Perspective ###
+### From a Learning Perspective ###  
 The task management application is simple in functionality, yet it comprehensively covers the fundamental components required for real-world application development (such as backend CRUD operations, frontend form handling, and database integration). This made it an ideal project with a realistic level of difficulty that matched my current skill set. Although I had other options, such as a note-taking app, an app with posting features, or a schedule management app, I ultimately chose to develop a task management app because of the second reason.
 
-### Based on Real-Life Demand and Personal Experience ###
+### Based on Real-Life Demand and Personal Experience ###  
 At this university, I often heard that students were either pursuing double majors or facing a heavy load of assignments. I, too, frequently struggled with managing my tasks and assignments. Given this background, I felt there was a need for a tool to help organize personal tasks and assignments, and I wanted to create an application that could assist students in managing their daily workload.
 
-# Objectives #
+# Objectives #  
 I had two main objectives for this senior project. First, I wanted to study the fundamental skills required for application development. Second, I aimed to learn the entire process from development to deployment. I am still not very familiar with programming and it was the first time to develop and deploy an application from scratch, because I switched my major from economics to computer science after transferring from a Japanese university. This project provided my first opportunity to develop and deploy an application from scratch, allowing me to build my foundational skills and gain hands-on experience throughout the entire development cycle.
 
-# Used Technologies #
+# Used Technologies #  
 ### Python ###
 The backend functions are handled using the Python Flask framework, which is primarily used to implement the following features:  
 -Launching the application  
@@ -28,15 +28,15 @@ The backend functions are handled using the Python Flask framework, which is pri
 -Implementation of basic CRUD operations (Create, Read, Update, Delete)  
 -Automatic task sorting  
 
-### HTML/CSS ###
+### HTML/CSS ###  
 Used for the front-end to manage the application’s appearance and to retrieve and display task information provided by the backend.
 
-### AWS EC2 ###
+### AWS EC2 ###  
 Used for infrastructure purposes. It was utilized to set up the deployment server via an SSH connection.
 
-# About Backend #
+# About Backend #  
 As mentioned in the technology section, I used Flask—a Python framework—for the backend. Flask is a micro web framework for Python that is characterized by its lightweight and simple design, making it well-suited for developing small to medium-sized web applications. Therefore, Flask was the ideal choice for a web application with simple and basic functionalities like this task management app.
-Using the following “Create Task” code as an example, I will explain how the backend is structured and how functionality is processed using Flask.
+Using the following “Create Task” code as an example, I will explain how the backend is structured and how functionality is processed using Flask.  
 ```
 # Create a new task
 @bp.route('/create_task', methods=['GET', 'POST'])
@@ -78,29 +78,28 @@ def create_task():
     return render_template('create_task.html')
 ```
 
-
-### Function Invocation ###
+### Function Invocation ###  
 In Flask, you define which function should be invoked for a specific URL path by using decorators such as @app.route() or @bp.route().
 ```
 # Create a new task
 @bp.route('/create_task', methods=['GET', 'POST'])
 def create_task():
 ```
-### Login Verification ###
+### Login Verification ###  
 ```
 @login_required
 ```
 This is a decorator provided by the Flask-Login extension, which restricts access to this endpoint to only those users who are logged in. 
 Flask-Login simplifies user authentication and session management.
 
-### Request Method Check ###
+### Request Method Check ###  
 ```
 if request.method == 'POST':
 ```
 In Flask, you can access HTTP request information (such as the method, form data, cookies, etc.) through the request object. 
 This allows you to determine whether the user’s request is a GET or POST request and process the form data accordingly.
 
-### Page Redirection ###
+### Page Redirection ###  
 ```
 return redirect(url_for('todo_app.user'))
 ```

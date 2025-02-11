@@ -107,9 +107,9 @@ The functions redirect() and url_for() are helper functions in Flask. url_for() 
 
 # Demonstration #
 Now, I’m gonna show you what the application looks like.
-![home]({{ site.baseurl }}/assets/images/your-image.jpg)
+![home]({{ site.baseurl }}/images/scr-home.png)
 This is the Task management application. 
-
+![login]({{ site.baseurl }}/images/scr-login.png)
 When you open the application, you’ll see the login and register page. I’m gonna try to register to login
 
 you need to put your name, email and password. and click the register button. 

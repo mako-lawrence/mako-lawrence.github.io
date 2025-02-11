@@ -7,5 +7,5 @@ categories: jekyll update
 
 This post introduces web application that I developed for my senior project. 
 
-###Backgrounds###
+### Backgrounds ###
 

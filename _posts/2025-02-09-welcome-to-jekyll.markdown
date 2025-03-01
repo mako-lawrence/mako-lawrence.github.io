@@ -110,9 +110,9 @@ While the backend handles the business logic and database interactions, the fron
 
 ### Templating with Jinja2 ###
 Jinja2 is a powerful templating engine that comes with Flask. By using Jinja2, the application can:
-	•	Insert dynamic data: Display real-time information about tasks, such as titles, due dates, and details, directly in HTML using the syntax `{{ ... }}`.
-	•	Control page flow: Employ conditional structures (`{% if %}`) or loops (`{% for %}`) within the HTML to selectively render expired tasks, list all tasks, or handle user-specific content.
-	•	Template inheritance: Define a base.html with shared elements like <head>, navigation bars, and footer, then let other pages (create_task.html, user.html, etc.) extend base.html with `{% extends 'base.html' %}`. Each page only needs to supply the unique block content, avoiding code duplication.
+  •Insert dynamic data: Display real-time information about tasks, such as titles, due dates, and details, directly in HTML using the syntax `{{ ... }}`.
+  •Control page flow: Employ conditional structures (`{% if %}`) or loops (`{% for %}`) within the HTML to selectively render expired tasks, list all tasks, or handle user-specific content.
+  •Template inheritance: Define a base.html with shared elements like <head>, navigation bars, and footer, then let other pages (create_task.html, user.html, etc.) extend base.html with `{% extends 'base.html' %}`. Each page only needs to supply the unique block content, avoiding code duplication.
 
 This simplifies updates, because common sections of the layout are centralized in one template.
 
@@ -198,7 +198,6 @@ and user.html
     </div>
 </main>
 {% endblock content %}
-
 ```
 
 ### Navigation and Conditional Rendering ###

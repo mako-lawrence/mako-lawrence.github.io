@@ -105,6 +105,121 @@ return redirect(url_for('todo_app.user'))
 ```
 The functions redirect() and url_for() are helper functions in Flask. url_for() dynamically generates a URL for an endpoint within the application, and redirect() sends the user to the specified URL. This ensures that after the processing is completed, the user is directed to the appropriate page.
 
+# About Frontend #
+While the backend handles the business logic and database interactions, the frontend determines how data is presented and how users interact with it. In this task management application, I used HTML and CSS along with Flask’s Jinja2 templating engine to generate dynamic content.
+
+### Templating with Jinja2 ###
+Jinja2 is a powerful templating engine that comes with Flask. By using Jinja2, the application can:
+	•	Insert dynamic data: Display real-time information about tasks, such as titles, due dates, and details, directly in HTML using the syntax {{ ... }}.
+	•	Control page flow: Employ conditional structures ({% if %}) or loops ({% for %}) within the HTML to selectively render expired tasks, list all tasks, or handle user-specific content.
+	•	Template inheritance: Define a base.html with shared elements like <head>, navigation bars, and footer, then let other pages (create_task.html, user.html, etc.) extend base.html with {% extends 'base.html' %}. Each page only needs to supply the unique block content, avoiding code duplication.
+
+This approach keeps the front-end DRY (Don’t Repeat Yourself) and simplifies updates, because common sections of the layout are centralized in one template.
+
+### Frontend Structure ###
+Using the following code used in "base.html" and "user.html" which are used in the user main page to display tasks as an example, I will explain the frontend structure.
+
+Here is base.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/reset.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+        {% endblock head %}
+        
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <ul id="nav">
+                <li><a class="nav-links" href="{{url_for('todo_app.home')}}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a class="nav-links" aria-current="page" href="{{ url_for('todo_app.logout') }}">Logout</a></li>
+                {% endif %}
+                <li><a class="nav-links" href="{{ url_for('todo_app.user') }}">User Page</a></li>
+            </ul>
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    </body>
+</html>
+```
+
+and user.html
+```
+{% from "_formhelpers.html" import render_field %}
+{% extends 'base.html' %}
+
+{% block title %}Task List Page{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="task-add-button-container">
+            <button class="blue-button task-add-button">
+                <a class="" href="/create_task" role="button">Create New</a>
+            </button>
+        </div>
+        <div class="tasks-wrapper">
+            {% for task in tasks %}
+            <div class="task-container">
+                <div class="task-detail">
+                    <h2 class="task-title">{{ task.title }}</h2>
+                    <p>Deadline: {{ task.end_time.date() }}</p>
+                    {% if task.end_time.date() < today %}
+                    <button class="orange-button expired-button">
+                        Expired!
+                    </button>
+                    {% endif %}
+                    
+                </div>
+                <div class="task-edit-buttons-container">
+                    <button class="gray-button"><a href="/detail/{{ task.id }}" role="button">Details</a></button>
+                    <button class="green-button"><a href="/update/{{ task.id }}" role="button">Edit</a></button>
+                    <button class="red-button"><a href="/delete/{{ task.id }}" role="button">Complete</a></button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock content %}
+
+```
+
+### Navigation and Conditional Rendering ###
+Jinja2 allows for control structures like {% if current_user.is_authenticated %} to show or hide links depending on whether the user is logged in.
+URLs for different routes are constructed using url_for('route_name').
+
+### Styling with CSS ###
+A reset stylesheet (reset.css) plus a main stylesheet (styles.css) are included to maintain consistent styling across browsers.
+The design uses Google Fonts (e.g., BIZ UDP Gothic) and color-coded buttons (blue, green, orange, red, and gray) for a clear visual indication of different actions.
+
+### Dynamic Content Display ###
+The application passes a list of task objects (e.g., tasks) from the Flask backend to a template like user.html.
+Using {% for task in tasks %}, each task’s details (title, deadline, etc.) are displayed.
+A comparison like if task.end_time.date() < today triggers an “Expired!” button to appear.
+
+### User Interaction ###
+Buttons link to CRUD routes: “Create New” (/create_task), “Edit” (/update/<task_id>), “Complete” (/delete/<task_id>), etc.
+By placing these buttons prominently, users can easily create, view, and edit tasks from the front end.
+
+Overall, Flask + Jinja2 provides a straightforward way to pass data (like tasks) from the backend to the frontend, handle user actions through forms or links, and dynamically render HTML based on real-time application data.
+
 # Demonstration #
 Now, I’m gonna show you what the application looks like.
 ![home]({{ site.baseurl }}/images/scr-home.png)

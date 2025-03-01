@@ -205,10 +205,6 @@ and user.html
 Jinja2 allows for control structures like {% if current_user.is_authenticated %} to show or hide links depending on whether the user is logged in.
 URLs for different routes are constructed using url_for('route_name').
 
-### Styling with CSS ###
-A reset stylesheet (reset.css) plus a main stylesheet (styles.css) are included to maintain consistent styling across browsers.
-The design uses Google Fonts (e.g., BIZ UDP Gothic) and color-coded buttons (blue, green, orange, red, and gray) for a clear visual indication of different actions.
-
 ### Dynamic Content Display ###
 The application passes a list of task objects (e.g., tasks) from the Flask backend to a template like user.html.
 Using {% for task in tasks %}, each task’s details (title, deadline, etc.) are displayed.

@@ -120,6 +120,7 @@ This simplifies updates, because common sections of the layout are centralized i
 Using the following code used in "base.html" and "user.html" which are used in the user main page to display tasks as an example, I will explain the frontend structure.
 
 Here is base.html
+{% raw %}
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -158,8 +159,10 @@ Here is base.html
     </body>
 </html>
 ```
+{% endraw %}
 
 and user.html
+{% raw %}
 ```
 {% from "_formhelpers.html" import render_field %}
 {% extends 'base.html' %}
@@ -199,6 +202,7 @@ and user.html
 </main>
 {% endblock content %}
 ```
+{% endraw %}
 
 ### Navigation and Conditional Rendering ###
 Jinja2 allows for control structures like {% raw %}{% if current_user.is_authenticated %}{% endraw %} to show or hide links depending on whether the user is logged in.

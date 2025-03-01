@@ -207,7 +207,7 @@ URLs for different routes are constructed using url_for('route_name').
 ### Dynamic Content Display ###
 The application passes a list of task objects (e.g., tasks) from the Flask backend to a template like user.html.
 Using `{% for task in tasks %}`, each task’s details (title, deadline, etc.) are displayed.
-A comparison like if task.end_time.date() < today triggers an “Expired!” button to appear.
+A comparison like `if task.end_time.date() < today` triggers an “Expired!” button to appear.
 
 ### User Interaction ###
 Buttons link to CRUD routes: “Create New” (/create_task), “Edit” (/update/<task_id>), “Complete” (/delete/<task_id>), etc.

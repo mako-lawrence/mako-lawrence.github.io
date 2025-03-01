@@ -1,5 +1,4 @@
 ---
-liquid: false
 layout: post
 title:  "Developing task management application"
 date:   2025-02-09 18:50:54 -0600
